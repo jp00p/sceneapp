@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block content %}
+<p> {{ message }} </p>
+
+{{ render_form(new_form) }}
+<hr>
+{{ render_form(join_form) }}
+<hr>
+{{ render_form(person_form) }}
+
+{% endblock %}
