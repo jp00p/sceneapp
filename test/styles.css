@@ -1,0 +1,50 @@
+/* Add your CSS styles here to position and style the elements */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  gap: 32px;
+}
+
+.body-svg {
+  border: 1px solid black;
+  position: relative;
+  padding: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.body-svg svg {
+  background: #000;
+}
+
+.canvas {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+}
+
+#front-canvas {
+  left: 0;
+}
+
+#back-canvas {
+  right: 0;
+}
+
+.save-button-container {
+  margin-top: 20px;
+}

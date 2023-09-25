@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Body Drawing App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="body-container">
+        <div class="body-svg">
+          <span>Front</span>
+          <!-- Include your local SVG files -->
+          <svg id="front-body" class="body-svg"
+            xmlns="http://www.w3.org/2000/svg" width="200" height="400">
+            <image xlink:href="human.svg" width="100%" height="100%" />
+          </svg>
+        </div>
+        <div class="body-svg">
+          <span>Back</span>
+          <svg id="back-body" class="body-svg"
+            xmlns="http://www.w3.org/2000/svg" width="200" height="400">
+            <image xlink:href="human.svg" width="100%" height="100%" />
+          </svg>
+        </div>
+        <div class="drawing-canvas">
+          <canvas id="front-canvas" class="canvas"></canvas>
+
+          <canvas id="back-canvas" class="canvas"></canvas>
+
+        </div>
+      </div>
+      <div class="button-container">
+        <button id="clear-front-button" class="clear-button">Clear Front</button>
+        <button id="clear-back-button" class="clear-button">Clear Back</button>
+        <button id="save-button">Save Drawings</button>
+
+        <button id="color-red">Red</button>
+        <button id="color-blue">Blue</button>
+
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

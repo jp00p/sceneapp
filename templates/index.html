@@ -1,13 +1,37 @@
-{% extends 'base.html' %}
+{%- extends "base.html" %}
+
 {% from 'bootstrap5/form.html' import render_form %}
+{% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
-<p> {{ message }} </p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-12">
+      <h3>Create scene</h3>
+      {{ render_form(new_form) }}
+    </div>
+    <div class="col-md-3 col-sm-12">
+      <h3>Join scene</h3>
+      {{ render_form(join_form) }}
+    </div>
+  </div>
 
-{{ render_form(new_form) }}
-<hr>
-{{ render_form(join_form) }}
-<hr>
-{{ render_form(person_form) }}
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3>Complete your details</h3>
+      {{ message }}
 
-{% endblock %}
+      {{ render_form(person_form) }}
+
+      {% for field in person_form %}
+      <tr>
+        <th>{{ field.label }}</th>
+        <td>{{ field.data }}</td>
+      </tr>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+{%- endblock %}
